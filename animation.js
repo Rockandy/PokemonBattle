@@ -1,4 +1,9 @@
-window.alert(
+    window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
     var xPos = 0;
     var yPos = 142;
     var oY = 200;
@@ -81,4 +86,3 @@ window.alert(
         if (yPos > 200 && oY > 125) {ellipse(xPos + 25, oY + 50, 20, 20); xPos+= 4; oY-=4;}
         if (yPos > 200 && oY > 125) {ellipse(oX - 25, ooY + 50, 20, 20); oX-= 4; ooY-=4;}
     };
-)
