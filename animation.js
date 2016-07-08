@@ -1,4 +1,4 @@
-document.write(
+window.alert(
     var xPos = 0;
     var yPos = 142;
     var oY = 200;
@@ -80,4 +80,5 @@ document.write(
         fill(250, 255, 92);
         if (yPos > 200 && oY > 125) {ellipse(xPos + 25, oY + 50, 20, 20); xPos+= 4; oY-=4;}
         if (yPos > 200 && oY > 125) {ellipse(oX - 25, ooY + 50, 20, 20); oX-= 4; ooY-=4;}
-    };)
+    };
+)
